@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "477ee8b1-c88a-4099-9c35-55eda3be55a7",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10731582"
+	},
+	"item": [
+		{
+			"name": "Create new statistic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : 2,\r\n    \"totalTrainings\" : 7,\r\n    \"totalDistance\" : 23.5,\r\n    \"totalCalories\" : 1450\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/statistics",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update statistic",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"userId\" : 2,\r\n    \"totalTrainings\" : 7,\r\n    \"totalDistance\" : 23.5,\r\n    \"totalCalories\" : 3500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/statistics",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get statistics for user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/statistics?userId=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete statistic",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/statistics?statisticId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "statisticId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get statistics by calories burned",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/statistics/2000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"statistics",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
